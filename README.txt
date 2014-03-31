@@ -1,11 +1,10 @@
-﻿perfect dark 简体中文化
+﻿perfect dark version 1.18 简体中文化
 
 文件:
 
     language.txt  PD简体中文语言文件。
     visual.txt    PD外观设置文件。设置的宋体貌似对界面无任何影响，请自行取用。
 
-适用版本: 1.17
 
 用法:
 
