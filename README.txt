@@ -18,6 +18,3 @@
   请确保 language.txt 的编码为 UTF-16LE (带签名)，软件才正常读取，
   方法：记事本打开 language.txt->另存为->编码: Unicode->保存。
 
-使用协议:
-
-  与 perfect dark 使用协议一致
