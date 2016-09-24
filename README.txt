@@ -2,6 +2,11 @@
 
 ------------------------------------
 
+请从此处下载：
+
+https://github.com/mike2718/mutagen/raw/master/language.txt
+
+
 用法:
 
   1. 关闭 perfect dark
