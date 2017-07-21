@@ -2,17 +2,16 @@
 
 ------------------------------------
 
-请从此处下载：
+下载:
 
-https://github.com/mike2718/mutagen/raw/master/language.txt
+网址 https://github.com/mike2718/mutagen
+点击页面右侧的 Clone or download -> Download ZIP 下载。
 
 
-用法:
+安装:
 
-  1. 关闭 perfect dark
-  2. 如果 perfect dark 目录下存在 mutagen 文件夹，先删除 mutagen 文件夹
-  3. 启动 perfect dark，设置->其它->导出文件，得到 mutagen 文件夹
-  4. 把 language.txt 文件复制到 mutagen 文件夹下替换同名文件
+1. 启动 perfect dark，设置 -> 其它 -> 导出文件，得到 mutagen 文件夹
+2. 把 language.txt 文件复制到 mutagen 文件夹下替换同名文件
 
 
 LICENSE: The MIT License (MIT)
