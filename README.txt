@@ -18,4 +18,3 @@
 
 3. 关闭并重启 perfect dark，点击 settings -> general ，在 language 下，
    选择 中文(简体)
-

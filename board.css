@@ -1,0 +1,166 @@
+﻿/*全体*/
+body	{
+	font-size:smaller;
+	margin: 20px;
+	font-family:'Microsoft YaHei', '微软雅黑', '宋体',sans-serif;
+	color:#444;
+	background-color:#e1e1e1;
+}
+html,body{
+	scrollbar-base-color: #fff;
+	scrollbar-track-color: #fff;
+	scrollbar-face-color: #fff;
+	scrollbar-shadow-color: #288;
+	scrollbar-darkshadow-color: #aaa;
+	scrollbar-highlight-color: #fff;
+	scrollbar-3dlight-color: #aaa;
+}
+
+.outofdate {
+	background-color:#fcc;
+}
+
+a:link  {
+	color:#0000ff;
+}
+a:visited  {
+	color:#0000ff;
+}
+
+/*ボードの情報*/
+.info	{
+	padding: 10px;
+	border:1px solid #8c8;
+	background-color:#efe;
+}
+/*ナビゲート*/
+.navi	{
+	font-weight:bold;
+	padding: 5px;
+	border:1px solid #f88;
+	background-color:#fee;
+}
+/*メッセージ*/
+.message{
+}
+/*レス*/
+.res{
+	margin: 10px 0px;
+	background-color:#efefef;
+	border:1px solid #888;
+	word-wrap: break-word;
+}
+/*通常ヘッダー*/
+.resheader{
+	margin: 5px;
+	padding: 5px;
+	background-color:#eef;
+	border:1px solid #88f;
+}
+/*新レスのヘッダー*/
+.resheader2{
+	margin: 5px;
+	padding: 5px;
+	background-color:#fee;
+	border:1px solid #f88;
+}
+.resmain{
+	padding: 8px;
+}
+.resquot{
+	color:#080;
+}
+.resfooter{
+	padding: 2px;
+	text-align: right;
+}
+
+/*サインが選択されていないときの警告文*/
+.error p{
+	font-weight:bold;
+	padding: 2px;
+	color:red;
+	background-color:#ff0;
+	border:1px solid #f00;
+}
+/*書き込み*/
+.post	{
+	padding: 10px;
+	background-color:#cef;
+	border:1px solid #48f;
+}
+
+/* */
+.number	{
+}
+.id	{
+	color:#008020;
+	font-weight:bold;
+}
+.id a:link{color:#008020;}
+.id a:visited{color:#008020;}
+.id2	{
+	color:#0000ff;
+	font-weight:bold;
+}
+.id2 a:link{color:#0000ff;}
+.id2 a:visited{color:#0000ff;}
+.name	{
+	color:#008;
+	font-weight:bold;
+}
+.sign	{
+	color:#080;
+	font-weight:bold;
+}
+.sign a{text-decoration : none;}
+.sign a:link{color:#080;}
+.sign a:visited{color:#080;}
+.title	{
+	font-weight:bold;
+}
+.title2	{
+	color:red
+}
+.date	{
+}
+.state	{
+	font-weight:bold;
+	color:red;
+}
+.menu	{
+	background-color:#FFFFFF;
+	top:0px;
+	left:0px;
+	position:absolute;
+	border:1px solid black;
+	visibility:hidden;
+}
+.menu2	{
+}
+/*メニュー選択の色*/
+.menu3	{
+	color:#ABFFAC;
+}
+.popup	{
+	position:absolute;
+	visibility:hidden;
+	overflow: auto;
+	padding: 1px;
+	border-width:1px 2px 2px 1px;
+	border-style:solid;
+	border-color:#888;
+	background-color:#e1e1e1;
+	scrollbar-base-color: #fff;
+	scrollbar-track-color: #fff;
+	scrollbar-face-color: #fff;
+	scrollbar-shadow-color: #288;
+	scrollbar-darkshadow-color: #aaa;
+	scrollbar-highlight-color: #fff;
+	scrollbar-3dlight-color: #aaa;
+}
+
+.button1 {
+	background: -moz-linear-gradient(top, #fff, #F1F1F1 1%, #F1F1F1 50%, #DFDFDF 99%, #ccc);
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.01, #F1F1F1), color-stop(0.5, #F1F1F1), color-stop(0.99, #DFDFDF), to(#ccc));
+}

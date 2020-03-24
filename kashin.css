@@ -1,0 +1,53 @@
+﻿/*全体*/
+body	{
+	font-size:smaller;
+	margin: 20px;
+	font-family:'Microsoft YaHei', '微软雅黑', '宋体',sans-serif;
+	color:#444;
+	background-color:#e1e1e1;
+}
+/*ステータス*/
+.status	{
+	padding: 10px;
+	border:1px solid #8c8;
+	background-color:#efe;
+}
+/*評価*/
+.review	{
+	margin: 10px 0px;
+	background-color:#eee;
+	border:1px solid #888;
+}
+/*評価ヘッダ*/
+.reviewheader	{
+	margin: 5px;
+	padding: 5px;
+	background-color:#eef;
+	border:1px solid #88f;
+}
+.reviewmain{
+	word-break: break-all;
+	padding: 10px;
+}
+.good	{
+	font-weight:bold;
+	color:#080;
+}
+.normal	{
+	font-weight:bold;
+	color:#444;
+}
+.bad	{
+	font-weight:bold;
+	color:#800;
+}
+.invalid	{
+	font-weight:bold;
+	color:#444;
+}
+
+
+.button1 {
+	background: -moz-linear-gradient(top, #fff, #F1F1F1 1%, #F1F1F1 50%, #DFDFDF 99%, #ccc);
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.01, #F1F1F1), color-stop(0.5, #F1F1F1), color-stop(0.99, #DFDFDF), to(#ccc));
+}
