@@ -12,7 +12,7 @@ perfect dark 是什么?
 ----
 
 1. 访问 [GitHub](https://github.com/muirmok/mutagen)
-2. 点击页面右侧的 Clone or download -> Download ZIP 下载，得到 .zip 压缩包。
+2. 点击页面右侧的 `Clone or download` -> `Download ZIP` ，下载得到 .zip 压缩包。
 
 安装简体中文化
 ----

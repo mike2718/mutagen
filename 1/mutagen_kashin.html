@@ -14,21 +14,21 @@
 <h2>次世代P2P软件 perfect dark</h2>
 <hr>
 <h4>&ltkashin.html , kashin.js&gt</h4>
-<p>perfect dark はインターフェイス用に httpサーバ機能を実装しています。<br/>
-kashin.html と kashin.js は、ファイル情報が表示される際に、httpサーバ機能により使用されます。
+<p>perfect dark 提供了用于http服务器功能的接口。<br/>
+当用于显示文件时，http服务器使用 kashin.html 和 kashin.js 两个文件。
 </p>
-<p>ファイル情報の表示の際には、perfect dark はまず、<br/>
+<p>当显示文件时，perfect dark 首先打开<br/>
 <span class="quote">http://127.0.0.1:port/ID<br/>
-（port はインターフェイスポート番号、ID はファイル固有の文字列）<br/></span>
-を開き、kashin.html と kashin.js が読み込まれます。<br/>
-kashin.html と kashin.js は、http://127.0.0.1:port/ID.xml を取得し、XMLファイルの内容を解析し、表示します。<br/>
-アドレスは外部ブラウザで表示することにより取得できます。
+（port 为接口端口号，ID 为文件专有的字符串<br/></span>
+载入 kashin.html 和 kashin.js。<br/>
+kashin.html 和 kashin.js 获取 http://127.0.0.1:port/ID.xml 的内容，解析XML文件并显示。<br/>
+当使用外部浏览器浏览时，可获取到地址。
 </p>
-<p>kashin.html と kashin.js の内容を見れば、詳しい動作を理解できると思います。<br/>
-これらのファイルも編集し、カスタマイズすることが出来ます。
+<p>通过浏览 kashin.html 和 kashin.js 的内容，能理解详细的工作原理。<br/>
+通过编辑这些文件，能自定义一些内容。
 </p>
-<p>なお、perfect dark には JavaScriptライブラリの Prototype が搭載されています。<br/>
-htmlファイルにて、"prototype.js" を読み込むことにより使用できます。
+<p>此外，perfect dark 中包含了名为 Prototype 的 JavaScript 库。<br/>
+在html文件中，通过加载 "prototype.js" ，可以使用这个库。
 </p>
 
 </body>
