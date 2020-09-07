@@ -1,6 +1,6 @@
 ﻿# perfect dark version 1.23 简体中文化
 
-## 本人最近很忙，不知道什么时候翻译得完
+## 请注意：本人最近很忙，不知道什么时候翻译得完
 
 ## perfect dark 是什么?
 
@@ -22,3 +22,8 @@
 
 1. 关闭 `perfect dark.exe`
 2. 将 `mutagen` 文件夹删除
+
+## todo列表
+
+* 帮助文档全翻译
+* language.txt改成作者推荐格式
