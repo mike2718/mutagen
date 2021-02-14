@@ -13,7 +13,7 @@
 
 ## 安装简体中文化
 
-1. 如果已经安装了其他语言的翻译文件，请视情况先备份 `mutagen` 文件夹
+1. 如果已经安装了其他语言的翻译文件，请视情况备份 `mutagen` 文件夹
 2. 启动 `perfect dark.exe` ，点击 `settings` -> `other` ，在 `mutagen(customize)` 下，选择 `write files`，退出 `perfect dark.exe`
 3. 打开 `perfect dark.exe` 所在文件夹下的  `mutagen` 文件夹，把压缩包内的所有文件复制粘贴到 `mutagen` 文件夹下，替换所有同名文件
 4. 启动 `perfect dark.exe`，点击 `settings` -> `general` ，在 `language` 下，选择 `中文(简体)`
@@ -25,5 +25,6 @@
 
 ## todo列表
 
-* 帮助文档全翻译
-* language.txt改成作者推荐格式
+* [] 翻译帮助文档进度100%
+* [] 将language.txt改成作者推荐格式
+
