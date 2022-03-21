@@ -34,4 +34,4 @@
 - [ ] 帮助文档html翻译进度达到100%
 - [x] 将language.txt改成作者推荐格式
 - [ ] 按照[简体中文本地化风格指南](http://download.microsoft.com/download/4/c/a/4ca95933-3496-4793-9d77-a89b60a8312c/zho-chn-styleguide.pdf)修订翻译
-
+- [ ] 提取version 1.24的mutagen文件

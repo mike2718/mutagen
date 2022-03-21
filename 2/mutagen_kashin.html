@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="help.css" type="text/css">
+</head>
+
+<body>
+
+<h2>次世代P2P软件 perfect dark</h2>
+<hr>
+<h4>&ltkashin.html , kashin.js&gt</h4>
+<p>perfect dark 提供了用于http服务器功能的接口。<br/>
+当用于显示文件时，http服务器使用 kashin.html 和 kashin.js 两个文件。
+</p>
+<p>当显示文件时，perfect dark 首先打开<br/>
+<span class="quote">http://127.0.0.1:port/ID<br/>
+（port 为接口端口号，ID 为文件专有的字符串<br/></span>
+载入 kashin.html 和 kashin.js。<br/>
+kashin.html 和 kashin.js 获取 http://127.0.0.1:port/ID.xml 的内容，解析XML文件并显示。<br/>
+当使用外部浏览器浏览时，可获取到地址。
+</p>
+<p>通过浏览 kashin.html 和 kashin.js 的内容，能理解详细的工作原理。<br/>
+通过编辑这些文件，能自定义一些内容。
+</p>
+<p>此外，perfect dark 中包含了名为 Prototype 的 JavaScript 库。<br/>
+在html文件中，通过加载 "prototype.js" ，可以使用这个库。
+</p>
+
+</body>
+</html>

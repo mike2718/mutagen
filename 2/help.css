@@ -1,10 +1,10 @@
-/*‘S‘Ì*/
+ï»¿/*å…¨ä½“*/
 body	{
 	font-size:smaller;
 	line-height:1.5em;
 	margin: 1em;
 	padding: 1em;
-	font-family:Meiryo, 'ƒƒCƒŠƒI', '‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+	font-family:'Noto Sans CJK SC', 'Microsoft YaHei', SimSun, sans-serif;
 	color:#444;
 	background-color:#e1e1e1;
 }
@@ -75,7 +75,7 @@ a:hover   { color: #b000f0; text-decoration: none }
 }
 .menu2	{
 }
-/*ƒƒjƒ…[‘I‘ğ‚ÌF*/
+/*ãƒ¡ãƒ‹ãƒ¥ãƒ¼é¸æŠã®è‰²*/
 .menu3	{
 	color:#ABFFAC;
 }
