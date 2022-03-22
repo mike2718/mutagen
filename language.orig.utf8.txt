@@ -1,4 +1,4 @@
-﻿/* perfect dark infoline */
+/* perfect dark infoline */
 id "0"
 "perfect dark by Kaicho-."
 "perfect dark by 会長."
