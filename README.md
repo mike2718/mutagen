@@ -10,7 +10,7 @@
 
 ## 这是什么
 
-这是[Perfect Dark](https://zh.wikipedia.org/zh-cn/Perfect_Dark)的简体中文翻译包
+这是[perfect dark](https://zh.wikipedia.org/zh-cn/Perfect_Dark)的简体中文翻译包
 
 ## 下载
 
