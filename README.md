@@ -1,4 +1,4 @@
-﻿# perfect dark version 1.23 简体中文化
+# perfect dark version 1.23 简体中文化
 
 ## 目录
 
