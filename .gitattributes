@@ -16,6 +16,7 @@
 
 # Denote all files that are truly binary and should not be modified.
 *.zip binary
+*.tar.zst binary
 *.png binary
 *.gif binary
 *.jepg binary
