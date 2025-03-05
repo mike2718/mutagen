@@ -14,7 +14,7 @@
 
 ## 下载
 
-1. 访问 [GitHub 项目主页](https://github.com/muirmok/mutagen)
+1. 访问 [GitHub 项目主页](https://github.com/mike2718/mutagen)
 2. 点击 `Code` → `Download ZIP` 下载 `.zip` 压缩包
 
 ## 安装
