@@ -1,0 +1,3 @@
+perfect dark END-USER SOFTWARE LICENSE AGREEMENT
+
+No Reverse Engineering. Customer may not reverse engineer, decompile, or disassemble the SOFTWARE, nor attempt in any other manner to obtain the source code.
