@@ -1,4 +1,4 @@
-# perfect dark 1.24 简体中文化
+# perfect dark 1.29 简体中文化
 
 ## 目录
 
@@ -21,8 +21,8 @@
 
 1. **备份原翻译文件**（如已安装其他语言的 `mutagen` 文件夹）。
 2. 启动 `perfect dark.exe`，依次进入 `Settings` → `Other`，在 `mutagen (customize)` 选项下点击 `Write files`，然后退出程序。
-3. 解压 `.zip` 文件，将 `mutagen` 文件夹内的所有文件复制到 `perfect dark.exe` 目录下的 `mutagen` 文件夹，并替换同名文件。
-4. 重新启动 `perfect dark.exe`，依次进入 `Settings` → `General`，在 `Language` 选项下选择 **“中文(简体)”**。
+3. 解压 `.zip` 文件，将 `mutagen` 文件夹内的所有文件复制到 `perfect dark.exe` 目录下的 `mutagen` 文件夹，并替换所有同名文件。
+4. 重新启动 `perfect dark.exe`，依次进入 `Settings` → `General`，在 `Language` 选项下选择 **Simplified Chinese**。
 
 ## 卸载
 
@@ -33,5 +33,5 @@
 
 - [ ] 翻译帮助文档 HTML（目标：100%）
 - [x] 按作者推荐格式调整 `language.txt`
-- [ ] 根据 [简体中文本地化风格指南](https://download.microsoft.com/download/1/5/9/159cb91c-b61b-4385-97ca-80ccc7ff1fa0/zho-chn-StyleGuide.pdf) 优化翻译
-- [ ] 更新翻译文本到 version 1.29
+- [x] 根据 [简体中文本地化风格指南](https://download.microsoft.com/download/1/5/9/159cb91c-b61b-4385-97ca-80ccc7ff1fa0/zho-chn-StyleGuide.pdf) 优化翻译
+- [ ] 更新界面翻译文本到 version 1.29

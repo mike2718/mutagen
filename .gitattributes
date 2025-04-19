@@ -3,10 +3,9 @@
 
 # Explicitly declare text files you want to always be normalized and converted
 # to native line endings on checkout.
-*.md text
+# *.md text
 
 # Declare files that will always have CRLF line endings on checkout.
-*.txt text eol=crlf
 *.css text eol=crlf
 *.js text eol=crlf
 *.html text eol=crlf
@@ -16,3 +15,11 @@
 *.png binary
 *.gif binary
 *.jpg binary
+*.txt binary
+*.zip binary
+*.pdf binary
+*.exe binary
+*.dll binary
+*.jar binary
+*.woff binary
+*.woff2 binary
