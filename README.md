@@ -34,4 +34,4 @@
 - [ ] 翻译帮助文档 HTML（目标：100%）
 - [x] 按作者推荐格式调整 `language.txt`
 - [x] 根据 [简体中文本地化风格指南](https://download.microsoft.com/download/1/5/9/159cb91c-b61b-4385-97ca-80ccc7ff1fa0/zho-chn-StyleGuide.pdf) 优化翻译
-- [ ] 更新界面翻译文本到 version 1.29
+- [x] 更新界面翻译文本到 version 1.29
