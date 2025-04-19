@@ -1,21 +1,17 @@
-# Set the default behavior, in case people don't have core.autocrlf set.
-# * text=auto
+# 文本文件处理（UTF-8 with BOM，CRLF行尾）
+*.html   text eol=crlf working-tree-encoding=UTF-8-BOM
+*.css    text eol=crlf working-tree-encoding=UTF-8-BOM
+*.js     text eol=crlf working-tree-encoding=UTF-8-BOM
+*.txt    text eol=crlf
 
-# Explicitly declare text files you want to always be normalized and converted
-# to native line endings on checkout.
-# *.md text
+# 特殊文本文件处理
+language.txt text eol=crlf working-tree-encoding=UTF-16LE-BOM
 
-# *.css text eol=lf
-# *.js text eol=crlf
-# *.html text eol=crlf
+# 二进制文件标记
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
 
-# Denote all files that are truly binary and should not be modified.
-*.png binary
-*.gif binary
-*.jpg binary
-*.txt binary
-*.zip binary
-*.exe binary
-*.dll binary
-*.woff binary
-*.woff2 binary
+# 特定文件例外处理
+./0/help.css -text  # Non-ISO extended-ASCII
