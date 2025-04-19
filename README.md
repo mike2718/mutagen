@@ -15,13 +15,13 @@
 ## 下载
 
 1. 访问 [GitHub 项目主页](https://github.com/mike2718/mutagen)
-2. 点击 `Code` → `Download ZIP` 下载 `.zip` 压缩包
+2. 点击 `Code` → `Download ZIP` 下载 `mutagen-main.zip` 压缩包
 
 ## 安装
 
 1. **备份原翻译文件**（如已安装其他语言的 `mutagen` 文件夹）。
 2. 启动 `perfect dark.exe`，依次进入 `Settings` → `Other`，在 `mutagen (customize)` 选项下点击 `Write files`，然后退出程序。
-3. 解压 `.zip` 文件，将 `mutagen` 文件夹内的所有文件复制到 `perfect dark.exe` 目录下的 `mutagen` 文件夹，并替换所有同名文件。
+3. 解压 `mutagen-main.zip` 压缩包文件，将压缩包内的 `mutagen-main` 文件夹中的所有文件复制到 `perfect dark.exe` 目录下的 `mutagen` 文件夹中，并替换所有同名文件。
 4. 重新启动 `perfect dark.exe`，依次进入 `Settings` → `General`，在 `Language` 选项下选择 **Simplified Chinese**。
 
 ## 卸载
