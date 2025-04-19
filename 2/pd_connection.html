@@ -11,75 +11,74 @@
 
 <body>
 
-<h2>コネクション</h2>
+<h2>连接</h2>
 
-<h4>Torコネクション</h4>
+<h4>Tor连接</h4>
 <p>
-Tor（正確にはonion routing）のアルゴリズムを利用した、perfect darkネットワーク内のコネクションを、Torコネクションと呼ぶ。</br>
-一般的なTorとの互換性はない。あくまでも、perfect dark内に実装した、コネクションの一種である。
+在 perfect dark 网络中，使用了 Tor（准确来说是洋葱路由）算法的连接被称为 Tor 连接。</br>
+与一般的 Tor 并不兼容。这只是 perfect dark 中实现的一种连接方式。
 </p><p>
-まず最初に、perfect darkの各々のノードは、Torコネクション用に公開鍵暗号の秘密鍵/公開鍵を持っている。</br>
-秘密鍵/公開鍵は、一定時間が経過（1-2時間）、またはIPアドレスが変更された際に、自動的に新しい鍵に更新される。</br>
-perfect darkの各ノードは、接続のため、他のノードの情報（IPアドレスと公開鍵）を一定数（今の実装だと約4000ノード分）保持している。</br>
-Torコネクションでは、IPアドレスと公開鍵（以下、ディレクトリリストと呼ぶ）を使用して、他のノードと接続する。
+首先，perfect dark 的每个节点都拥有用于 Tor 连接的公钥加密密钥对（私钥/公钥）。</br>
+私钥/公钥在经过一定时间（1-2小时）或者 IP 地址发生变化时，会自动更新为新的密钥。</br>
+perfect dark 的每个节点会为连接目的，保留一定数量（当前实现约为 4000 个节点）的其他节点信息（IP地址和公钥）。</br>
+Tor连接利用 IP 地址和公钥（以下称为目录列表）与其他节点建立连接。
 </p><p>
-Torコネクションとは、公開鍵暗号を利用した多段中継であり、送信者の匿名性を維持するために使用される。受信者の匿名性はない。</br>
-ここで、多段中継において、送信者をoriginator、中継者をrelay 1、relay 1の次の中継者をrelay 2、それを繰り返して、relay n-1とする。</br>
-下記のような接続経路となる。</p><p>
+Tor连接是一种利用公钥加密的多级中继方式，用于保持发送者的匿名性。接收者的匿名性不被保证。</br>
+在这里，多级中继中，发送者称为 originator，中继节点依次称为 relay 1、relay 2，如此类推，直到 relay n-1。</br>
+连接路径如下所示：</p><p>
 originator - relay 1 - relay 2 - relay 3 --- relay n-1</p><p>
-originator（送信者）からrelay 1へデータを送信すると、relay 1からrelay 2、relay 2からrelay 3と、次々にデータが中継され、最終的に relay n-1が受信する。relay n-1が最終的なデータの受信者となるが、relay n-1からは、どこからデータが送信されたか、知ることは出来ない。
+当 originator（发送者）向 relay 1 发送数据时，数据会依次通过 relay 1 到 relay 2，relay 2 到 relay 3 中继，最终由 relay n-1 接收。relay n-1 是最终接收数据的一方，但它无法知道数据来自哪里。
 </p><p>
-次に、コネクションの実際の処理について詳述する。</br>
-まず、originatorは、ディレクトリリストの中からランダムにノードを選び、relay 1とする。新しい秘密鍵/公開鍵を作成し、これをkey o1とする。relay 1の秘密鍵/公開鍵はkey r1とする。</br>
-次に、originatorはrelay 1に接続し、自身の公開鍵を送信する。relay 1はoriginatorの公開鍵を受信し、自身の秘密鍵を組み合わせて、共通鍵を作成する。また、originatorはディレクトリリストに登録されているrelay 1の公開鍵と、自身の秘密鍵を組み合わせて、共通鍵を作成する。</br>
-この処理により、以後originator - relay 1間の通信は、この共通鍵により暗号化される。暗号化されたデータを、encrypted(key o1, key r1, data)と表記する。ここで重要なことは、公開鍵暗号により、originator - relay 1間の通信は、この2つのノード以外は（どちらかが攻撃者でない限りは）分からない、という事である。</br>
+接下来将详细说明连接的实际处理。</br>
+首先，originator 会从目录列表中随机选择一个节点作为 relay 1。生成一个新的密钥对，称为 key o1。relay 1 的密钥对为 key r1。</br>
+然后，originator 连接到 relay 1，并发送自己的公钥。relay 1 接收到 originator 的公钥后，结合自己的私钥生成一个共享密钥。同时，originator 利用 relay 1 的公钥与自己的私钥也生成相同的共享密钥。</br>
+通过这个过程，originator 和 relay 1 之间的通信将使用该共享密钥进行加密。加密后的数据表示为 encrypted(key o1, key r1, data)。关键在于，这种基于公钥加密的通信，仅对这两个节点可见（前提是双方都不是攻击者）。</br>
 </p><p>
-次の中継のため、originatorは、ディレクトリリストの中からランダムにノードを選び、relay 2とする。新しい秘密鍵/公開鍵を作成し、これをkey o2とする。relay 2の秘密鍵/公開鍵はkey r2とする。</br>
-originatorはrelay 1に、relay 2に接続するよう要求する。relay 1がrelay 2に接続すると、originatorは（relay 1経由で）relay 2に新しい公開鍵を送信する。</br>
-relay 2はoriginatorの公開鍵を受信し、自身の秘密鍵を組み合わせて、共通鍵を作成する。また、originatorはディレクトリリストに登録されているrelay 2の公開鍵と、自身の秘密鍵を組み合わせて、共通鍵を作成する。</br>
-この処理により、以後originator - relay 2間の通信は、この共通鍵により暗号化される。暗号化されたデータは、encrypted(key o2, key r2, data)と表記される。
+接下来，为进行第二级中继，originator 从目录列表中随机选择一个节点作为 relay 2。生成新的密钥对 key o2，relay 2 的密钥对为 key r2。</br>
+originator 要求 relay 1 连接到 relay 2。当 relay 1 与 relay 2 连接后，originator 通过 relay 1 向 relay 2 发送新的公钥。</br>
+relay 2 接收到公钥后，与自己的私钥生成共享密钥。originator 也使用 relay 2 的公钥和自身私钥生成相同的共享密钥。</br>
+此后，originator 和 relay 2 之间的通信将被该共享密钥加密。加密数据记作 encrypted(key o2, key r2, data)。
 </p><p>
-originatorからrelay 2にデータを送信する場合は、あらかじめ2重に暗号化を施し、下記の表記のデータとなる。</br>
+如果 originator 向 relay 2 发送数据，会事先进行双重加密，格式如下：</br>
 encrypted(key o1, key r1, encrypted(key o2, key r2, data))</br>
-このデータは、originatorのみ復号可能であり、relay 1やrelay 2は、単独で復号することは出来ない。</br>
-originatorからrelay 1に上記のデータが送信されると、relay 1はデータを復号し、</br>
+该数据只能由 originator 解密，relay 1 和 relay 2 无法单独解密。</br>
+当该数据从 originator 发送给 relay 1 后，relay 1 解密得到：</br>
 encrypted(key o2, key r2, data)</br>
-とする。relay 1はこのデータを解釈することは出来ないため、中継してrelay 2に送信する。relay 2がデータを受信、復号し、データの解釈を行う。</br>
-relay 2からは、どこからデータが来ているのか、つまり、relay 1から来ているのかそれとも他の中継から来ているのか、うかがい知ることは出来ない。</br>
-relay 1が攻撃者でも、originator - relay 2間はkey o2/r2で暗号化されているため、通信内容を知る事は出来ない。</br>
-relay 2が攻撃者の場合、通信内容を知る事は出来るが、originatorを知る事は出来ない。
+relay 1 无法理解该数据内容，因此仅作为中继转发给 relay 2。relay 2 接收并解密后才能读取数据。</br>
+relay 2 无法得知数据来源，无法判断是来自 relay 1 还是其他中继。</br>
+即使 relay 1 是攻击者，由于 originator - relay 2 的通信使用 key o2/r2 加密，因此无法读取通信内容。</br>
+如果 relay 2 是攻击者，虽然可以读取内容，但无法识别 originator 的身份。
 </p><p>
-上記のように、originatorからrelay側にデータが移動する場合は、纏めて多段暗号化→中継される毎に復号、という処理が行われる。</br>
-一方、relayからoriginator側にデータが移動する場合は、中継毎に暗号化→originatorで纏めて復号、という処理になる。</br>
-つまり、relay 2からoriginatorへデータを送信する場合は、relay 2からrelay 1に、</br>
+如上所述，从 originator 向 relay 方向发送数据时，采用“多重加密后逐级解密”的方式。</br>
+而从 relay 向 originator 发送数据时，采用“逐级加密后统一解密”的方式。</br>
+例如，从 relay 2 向 originator 发送数据时，relay 2 向 relay 1 发送：</br>
 encrypted(key o2, key r2, data)</br>
-が送信される。relay 1は復号出来ないので、さらに暗号化した上でoriginatorに中継し、</br>
+由于 relay 1 无法解密，因此会再进行加密转发给 originator：</br>
 encrypted(key o1, key r1, encrypted(key o2, key r2, data))</br>
-を送信する。originatorは全ての鍵を所有しているため、全て復号し、dataを得ることが出来る。</br>
+originator 拥有全部密钥，因此可以解密全部内容并获得原始数据。</br>
 </p><p>
-同様の処理を繰り返して、relay 3、relay 4、、、relay n-1と、多段中継を作成する。
+同样的过程不断重复，可以建立 relay 3、relay 4……relay n-1 等多级中继。
 </p><p>
-中継の数は自由に変更できるが、現在の実装ではn=4、つまり、</br>
-originator - relay 1 - relay 2 - relay 3（＝受信者）</br>
-という構成になっている。送信者と受信者の間には、2つの中継を挟んでいる。
+中继数量可以自由设定，但目前的实现中为 n=4，即：</br>
+originator - relay 1 - relay 2 - relay 3（＝接收者）</br>
+即发送者和接收者之间有两个中继节点。
 </p><p>
-攻撃者が、originatorを特定し、なおかつ通信内容を知るためには、
+如果攻击者想要识别 originator 并获取通信内容，则必须满足以下任一条件：
 </p><p>
 <ol>
-<li>originatorがランダムに選んだrelay 1/2/3が、全て攻撃者である。</li>
-<li>攻撃者がrelay 1となり、公開鍵暗号を破る。</li>
+<li>originator 随机选择的 relay 1/2/3 全部是攻击者。</li>
+<li>攻击者成为 relay 1，并破解公钥加密。</li>
 </ol>
 </p><p>
-のいずれかが必要だが、現状では極めて困難であると考える。
-なお、公開鍵暗号はECDH 160bits、共通鍵暗号にはAES 128bitsを使用している。
+以上条件目前被认为非常难以实现。公钥加密采用 ECDH 160 位，共享密钥加密采用 AES 128 位。
 </p>
 
-<h4>まとめ</h4>
+<h4>总结</h4>
 <p>
 <ul class="vlist">
-<li>Torコネクションとは、Torアルゴリズムをperfect dark内で実装したコネクションである。</li>
-<li>既存のTorとは互換性はない。</li>
-<li>送信者（originator）の匿名性は保証されるが、受信者（relay n-1）の匿名性はない（送信者は受信者を知る事が出来るが、受信者は送信者を知る事は出来ない）。</li>
+<li>Tor连接是在 perfect dark 中实现的 Tor 算法连接。</li>
+<li>与现有的 Tor 不兼容。</li>
+<li>发送者（originator）的匿名性可以得到保证，但接收者（relay n-1）的匿名性不被保证（发送者知道接收者是谁，但接收者无法知道发送者）。</li>
 </ul>
 </p>
 
