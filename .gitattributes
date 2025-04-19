@@ -14,4 +14,4 @@ language.txt text eol=crlf working-tree-encoding=UTF-16LE-BOM
 *.gif    binary
 
 # 特定文件例外处理
-./0/help.css -text  # Non-ISO extended-ASCII
+./0/help.css -text
