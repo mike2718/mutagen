@@ -1,11 +1,11 @@
 # CSS 样式文件
-*.css text working-tree-encoding=UTF-8
+*.css text working-tree-encoding=UTF-8 eol=CRLF
 
 # HTML 文件
-*.html text working-tree-encoding=UTF-8
+*.html text working-tree-encoding=UTF-8 eol=CRLF
 
 # JS 文件
-*.js text working-tree-encoding=UTF-8
+*.js text working-tree-encoding=UTF-8 eol=CRLF
 
 # UTF-16 文本文件（不常见，用 binary 处理以防止损坏）
 language.txt binary
@@ -15,3 +15,5 @@ language.txt binary
 *.jpg binary
 *.jpeg binary
 *.gif binary
+
+* text=auto
