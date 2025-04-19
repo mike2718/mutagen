@@ -16,4 +16,6 @@ language.txt binary
 *.jpeg binary
 *.gif binary
 
+*.md text
+
 * text=auto
